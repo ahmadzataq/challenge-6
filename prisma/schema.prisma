@@ -9,10 +9,10 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = "postgres://postgres.qdbtnsfbpdkzsrbtabdg:6d@U#QffrE&7,/$@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
-  directUrl = "postgres://postgres.qdbtnsfbpdkzsrbtabdg:6d@U#QffrE&7,/$@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+  provider = "postgresql"
+  url      = env("postgres://postgres.qdbtnsfbpdkzsrbtabdg:6d@U#QffrE&7,/$@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres")
 }
+
 model Art {
   id          Int      @id @default(autoincrement())
   title       String
